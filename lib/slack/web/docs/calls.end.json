@@ -1,0 +1,16 @@
+{
+  "args": {
+    "duration": {
+      "desc": "Call duration in seconds",
+      "required": true,
+      "type": "integer"
+    },
+    "id": {
+      "desc": "`id` returned when registering the call using the [`calls.add`](/methods/calls.add) method.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Ends a Call.",
+  "errors": {}
+}

@@ -1,0 +1,52 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "Maximum number of items to be returned. Must be between 1 - 20 both inclusive. Default is 10.",
+      "required": false,
+      "type": "integer"
+    },
+    "query": {
+      "desc": "Name of the the channel to query by.",
+      "required": false,
+      "type": "string"
+    },
+    "search_channel_types": {
+      "desc": "The type of channel to include or exclude in the search. For example `private` will search private channels, while `private_exclude` will exclude them. For a full list of types, check the [Types section](#types).",
+      "required": false,
+      "type": "string"
+    },
+    "sort": {
+      "desc": "Possible values are `relevant` (search ranking based on what we think is closest), `name` (alphabetical), `member_count` (number of users in the channel), and `created` (date channel was created). You can optionally pair this with the `sort_dir` arg to change how it is sorted ",
+      "required": false,
+      "type": "string"
+    },
+    "sort_dir": {
+      "desc": "Sort direction. Possible values are `asc` for ascending order like (1, 2, 3) or (a, b, c), and `desc` for descending order like (3, 2, 1) or (c, b, a)",
+      "required": false,
+      "type": "string"
+    },
+    "team_ids": {
+      "desc": "Comma separated string of team IDs, signifying the workspaces to search through.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Search for public or private channels in an Enterprise organization.",
+  "errors": {
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_cursor": "Error: invalid_cursor",
+    "invalid_search_channel_type": "Error: invalid_search_channel_type",
+    "invalid_sort": "Error: invalid_sort",
+    "invalid_sort_dir": "Error: invalid_sort_dir",
+    "not_allowed": "Error: not_allowed",
+    "not_an_admin": "Error: not_an_admin",
+    "not_an_enterprise": "Error: not_an_enterprise",
+    "team_not_found": "Error: team_not_found"
+  }
+}

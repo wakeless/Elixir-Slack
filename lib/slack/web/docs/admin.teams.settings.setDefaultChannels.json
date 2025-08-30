@@ -1,0 +1,21 @@
+{
+  "args": {
+    "channel_ids": {
+      "desc": "An array of channel IDs.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "ID for the workspace to set the default channel for.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set the default channels of a workspace.",
+  "errors": {}
+}

@@ -1,0 +1,26 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The encoded `channel_id` to add or remove to workspaces.",
+      "required": true,
+      "type": "string"
+    },
+    "org_channel": {
+      "desc": "True if channel has to be converted to an org channel",
+      "required": true,
+      "type": "boolean"
+    },
+    "target_team_ids": {
+      "desc": "A comma-separated list of workspaces to which the channel should be shared. Not required if the channel is being shared org-wide.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set the workspaces in an Enterprise grid org that connect to a public or private channel.",
+  "errors": {}
+}

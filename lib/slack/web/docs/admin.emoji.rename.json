@@ -1,0 +1,21 @@
+{
+  "args": {
+    "name": {
+      "desc": "The name of the emoji to be renamed. Colons (`:myemoji:`) around the value are not required, although they may be included.",
+      "required": true,
+      "type": "string"
+    },
+    "new_name": {
+      "desc": "The new name of the emoji.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Rename an emoji.",
+  "errors": {}
+}

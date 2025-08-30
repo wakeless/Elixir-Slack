@@ -1,0 +1,30 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to determine connected workspaces within the organization for.",
+      "required": true,
+      "type": "string"
+    },
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "desc": "Get all the workspaces a given public or private channel is connected to within this Enterprise org.",
+  "errors": {
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "could_not_get_teams": "Error: could_not_get_teams",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "invalid_cursor": "Error: invalid_cursor",
+    "invalid_limit": "Error: invalid_limit",
+    "restricted_action": "Error: restricted_action",
+    "unsupported_team_type": "Error: unsupported_team_type"
+  }
+}

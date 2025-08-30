@@ -1,0 +1,21 @@
+{
+  "args": {
+    "external_id": {
+      "desc": "Creator defined GUID for the file.",
+      "required": false,
+      "type": "string"
+    },
+    "file": {
+      "desc": "Specify a file by providing its ID.",
+      "required": false,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `remote_files:read`",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Retrieve information about a remote file added to Slack",
+  "errors": {}
+}

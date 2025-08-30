@@ -1,42 +1,70 @@
 {
-	"desc": "Lists & filters team files.",
-
-	"args": {
-		"user": {
-			"type"		: "user",
-			"required"	: false,
-			"desc"		: "Filter files created by a single user."
-		},
-		"channel": {
-			"type"		: "channel",
-			"required"	: false,
-			"desc"		: "Filter files appearing in a specific channel, indicated by its ID."
-		},
-		"ts_from": {
-			"required"	: false,
-			"example"	: "123456789",
-			"default"	: "0",
-			"desc"		: "Filter files created after this timestamp (inclusive)."
-		},
-		"ts_to": {
-			"required"	: false,
-			"example"	: "123456789",
-			"default"	: "now",
-			"desc"		: "Filter files created before this timestamp (inclusive)."
-		},
-		"types": {
-			"required"	: false,
-			"default"	: "all",
-			"example"	: "images",
-			"desc"		: "Filter files by type:\n\n* `all` - All files\n* `posts` - Posts\n* `snippets` - Snippets\n* `images` - Image files\n* `gdocs` - Google docs\n* `zips` - Zip files\n* `pdfs` - PDF files\n\nYou can pass multiple values in the types argument, like `types=posts,snippets`.The default value is `all`, which does not filter the list."
-		}
-	},
-
-	"has_paging"	: true,
-	"default_count"	: 100,
-
-	"errors": {
-		"user_not_found"	: "Value passed for `user` was invalid",
-		"unknown_type"		: "Value passed for `types` was invalid"
-	}
+  "args": {
+    "channel": {
+      "desc": "Filter files appearing in a specific channel, indicated by its ID.",
+      "required": false,
+      "type": "string"
+    },
+    "count": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "page": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "show_files_hidden_by_limit": {
+      "desc": "Show truncated file info for files hidden due to being too old, and the team who owns the file being over the file limit.",
+      "required": false,
+      "type": "boolean"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `files:read`",
+      "required": false,
+      "type": "string"
+    },
+    "ts_from": {
+      "desc": "Filter files created after this timestamp (inclusive).",
+      "required": false,
+      "type": "number"
+    },
+    "ts_to": {
+      "desc": "Filter files created before this timestamp (inclusive).",
+      "required": false,
+      "type": "number"
+    },
+    "types": {
+      "desc": "Filter files by type ([see below](#file_types)). You can pass multiple values in the types argument, like `types=spaces,snippets`.The default value is `all`, which does not filter the list.",
+      "required": false,
+      "type": "string"
+    },
+    "user": {
+      "desc": "Filter files created by a single user.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "List for a team, in a channel, or from a user with applied filters.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "unknown_type": "Error: unknown_type",
+    "upgrade_required": "Error: upgrade_required",
+    "user_is_bot": "Error: user_is_bot",
+    "user_not_found": "Error: user_not_found"
+  }
 }

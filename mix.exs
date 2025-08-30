@@ -28,8 +28,8 @@ defmodule Slack.Mixfile do
 
   defp deps do
     [
-      {:httpoison, "~> 1.2"},
-      {:websocket_client, "~> 1.2.4"},
+      {:httpoison, "~> 2.0"},
+      {:websocket_client, "~> 1.5"},
       {:jason, "~> 1.1"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, "~> 0.5", only: [:dev, :test]},

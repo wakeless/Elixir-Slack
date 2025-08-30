@@ -1,0 +1,26 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return.",
+      "required": false,
+      "type": "integer"
+    },
+    "team_id": {
+      "desc": "",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:read`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "List all of the admins on a given workspace.",
+  "errors": {}
+}

@@ -1,0 +1,21 @@
+{
+  "args": {
+    "expiration_ts": {
+      "desc": "Timestamp when guest account should be disabled.",
+      "required": true,
+      "type": "integer"
+    },
+    "team_id": {
+      "desc": "The ID (`T1234`) of the workspace.",
+      "required": true,
+      "type": "string"
+    },
+    "user_id": {
+      "desc": "The ID of the user to set an expiration for.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set an expiration for a guest user",
+  "errors": {}
+}

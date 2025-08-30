@@ -1,0 +1,24 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel that the users will be invited to.",
+      "required": true,
+      "type": "string"
+    },
+    "user_ids": {
+      "desc": "The users to invite.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Invite a user to a public or private channel.",
+  "errors": {
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "default_org_wide_channel": "Error: default_org_wide_channel",
+    "failed_for_some_users": "Error: failed_for_some_users",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "restricted_action": "Error: restricted_action",
+    "user_must_be_admin": "Error: user_must_be_admin"
+  }
+}

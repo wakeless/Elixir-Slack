@@ -1,0 +1,31 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+      "required": false,
+      "type": "string"
+    },
+    "enterprise_id": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
+      "required": false,
+      "type": "integer"
+    },
+    "team_id": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.apps:read`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "List restricted apps for an org or workspace.",
+  "errors": {}
+}

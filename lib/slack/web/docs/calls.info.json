@@ -1,0 +1,11 @@
+{
+  "args": {
+    "id": {
+      "desc": "`id` of the Call returned by the [`calls.add`](/methods/calls.add) method.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Returns information about a Call.",
+  "errors": {}
+}

@@ -1,0 +1,11 @@
+{
+  "args": {
+    "team_id": {
+      "desc": "",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Fetch information about settings in a workspace",
+  "errors": {}
+}

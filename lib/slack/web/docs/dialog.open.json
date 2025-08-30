@@ -1,0 +1,44 @@
+{
+  "args": {
+    "dialog": {
+      "desc": "The dialog definition. This must be a JSON-encoded string.",
+      "required": true,
+      "type": "string"
+    },
+    "trigger_id": {
+      "desc": "Exchange a trigger to post to the user.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Open a dialog with a user",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "app_missing_action_url": "Error: app_missing_action_url",
+    "cannot_create_dialog": "Error: cannot_create_dialog",
+    "failed_sending_dialog": "Error: failed_sending_dialog",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "invalid_trigger": "Error: invalid_trigger",
+    "json_not_object": "Error: json_not_object",
+    "missing_dialog": "Error: missing_dialog",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_trigger": "Error: missing_trigger",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "trigger_exchanged": "Error: trigger_exchanged",
+    "trigger_expired": "Error: trigger_expired",
+    "upgrade_required": "Error: upgrade_required",
+    "validation_errors": "Error: validation_errors"
+  }
+}

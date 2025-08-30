@@ -1,19 +1,55 @@
 {
-	"desc": "Gets information about a team file.",
-
-	"args": {
-		"file": {
-			"required"	: true,
-			"desc"		: "Specify a file by providing its ID.",
-			"example"	: "F2147483862"
-		}
-	},
-
-	"has_paging"	: true,
-	"default_count"	: 100,
-
-	"errors": {
-		"file_not_found"	: "Value passed for `file` was invalid",
-		"file_deleted"		: "The requested file has been deleted"
-	}
+  "args": {
+    "count": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "cursor": {
+      "desc": "Parameter for pagination. File comments are paginated for a single file. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection of comments. See [pagination](/docs/pagination) for more details.",
+      "required": false,
+      "type": "string"
+    },
+    "file": {
+      "desc": "Specify a file by providing its ID.",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached.",
+      "required": false,
+      "type": "integer"
+    },
+    "page": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `files:read`",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Gets information about a file.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "file_deleted": "Error: file_deleted",
+    "file_not_found": "Error: file_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "timezone_count_failed": "Error: timezone_count_failed",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

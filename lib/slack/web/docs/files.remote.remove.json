@@ -1,0 +1,21 @@
+{
+  "args": {
+    "external_id": {
+      "desc": "Creator defined GUID for the file.",
+      "required": true,
+      "type": "string"
+    },
+    "file": {
+      "desc": "Specify a file by providing its ID.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `remote_files:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Remove a remote file.",
+  "errors": {}
+}

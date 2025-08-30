@@ -1,15 +1,30 @@
 {
-  "desc": "Closes direct messages, multi-person or 1:1 or otherwise.",
-
   "args": {
     "channel": {
-      "example" : "G1234567890",
+      "desc": "Conversation to close.",
       "required": true,
-      "desc"    : "Conversation to close."
+      "type": "string"
     }
   },
-
+  "desc": "Closes a direct message or multi-person direct message.",
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid"
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "method_not_supported_for_channel_type": "Error: method_not_supported_for_channel_type",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required",
+    "user_does_not_own_channel": "Error: user_does_not_own_channel"
   }
 }

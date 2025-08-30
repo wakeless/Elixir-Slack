@@ -1,0 +1,26 @@
+{
+  "args": {
+    "desktop_app_join_url": {
+      "desc": "When supplied, available Slack clients will attempt to directly launch the 3rd-party Call with this URL.",
+      "required": true,
+      "type": "string"
+    },
+    "id": {
+      "desc": "`id` returned by the [`calls.add`](/methods/calls.add) method.",
+      "required": true,
+      "type": "string"
+    },
+    "join_url": {
+      "desc": "The URL required for a client to join the Call.",
+      "required": true,
+      "type": "string"
+    },
+    "title": {
+      "desc": "The name of the Call.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Updates information about a Call.",
+  "errors": {}
+}

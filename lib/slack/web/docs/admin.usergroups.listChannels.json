@@ -1,0 +1,21 @@
+{
+  "args": {
+    "include_num_members": {
+      "desc": "Flag to include or exclude the count of members per channel.",
+      "required": false,
+      "type": "boolean"
+    },
+    "team_id": {
+      "desc": "ID of the the workspace.",
+      "required": false,
+      "type": "string"
+    },
+    "usergroup_id": {
+      "desc": "ID of the IDP group to list default channels for.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "List the channels linked to an org-level IDP group (user group).",
+  "errors": {}
+}

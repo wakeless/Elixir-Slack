@@ -1,0 +1,21 @@
+{
+  "args": {
+    "alias_for": {
+      "desc": "The alias of the emoji.",
+      "required": true,
+      "type": "string"
+    },
+    "name": {
+      "desc": "The name of the emoji to be aliased. Colons (`:myemoji:`) around the value are not required, although they may be included.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Add an emoji alias.",
+  "errors": {}
+}

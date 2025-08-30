@@ -1,16 +1,38 @@
 {
-	"desc": "Gets information about a user.",
-
-	"args": {
-		"user": {
-			"type"		: "user",
-			"required"	: true,
-			"desc"		: "User to get info on"
-		}
-	},
-
-	"errors": {
-		"user_not_found"	: "Value passed for `user` was invalid.",
-		"user_not_visible"	: "The requested user is not visible to the calling user"
-	}
+  "args": {
+    "include_locale": {
+      "desc": "Set this to `true` to receive the locale for this user. Defaults to `false`",
+      "required": false,
+      "type": "boolean"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `users:read`",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "desc": "User to get info on",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Gets information about a user.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required",
+    "user_not_found": "Error: user_not_found",
+    "user_not_visible": "Error: user_not_visible"
+  }
 }

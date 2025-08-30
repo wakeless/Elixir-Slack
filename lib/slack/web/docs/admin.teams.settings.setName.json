@@ -1,0 +1,16 @@
+{
+  "args": {
+    "name": {
+      "desc": "The new name of the workspace.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "ID for the workspace to set the name for.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set the name of a given workspace.",
+  "errors": {}
+}

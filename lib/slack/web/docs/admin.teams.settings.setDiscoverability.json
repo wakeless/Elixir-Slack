@@ -1,0 +1,16 @@
+{
+  "args": {
+    "discoverability": {
+      "desc": "This workspace's discovery setting. It must be set to one of `open`, `invite_only`, `closed`, or `unlisted`.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "The ID of the workspace to set discoverability on.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "An API method that allows admins to set the discoverability of a given workspace",
+  "errors": {}
+}

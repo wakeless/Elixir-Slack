@@ -1,0 +1,21 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Value of the `next_cursor` field sent as part of the previous api response",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 - 1000 both inclusive",
+      "required": false,
+      "type": "integer"
+    },
+    "team_id": {
+      "desc": "ID for the workspace where the invite requests were made.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "List all denied workspace invite requests.",
+  "errors": {}
+}

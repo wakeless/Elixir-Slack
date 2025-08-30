@@ -1,23 +1,59 @@
 {
-    "desc": "Lists reactions made by a user.",
-
-    "args": {
-        "user": {
-            "type"		: "user",
-            "required"	: false,
-            "desc"		: "Show reactions made by this user. Defaults to the authed user."
-        },
-
-        "full": {
-            "required"  : false,
-            "desc"      : "If true always return the complete reaction list."
-        }
+  "args": {
+    "count": {
+      "desc": "",
+      "required": false,
+      "type": "integer"
     },
-
-    "has_paging"	: true,
-    "default_count"	: 100,
-
-    "errors": {
-        "user_not_found"	: "Value passed for `user` was invalid."
+    "cursor": {
+      "desc": "Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more details.",
+      "required": false,
+      "type": "string"
+    },
+    "full": {
+      "desc": "If true always return the complete reaction list.",
+      "required": false,
+      "type": "boolean"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached.",
+      "required": false,
+      "type": "integer"
+    },
+    "page": {
+      "desc": "",
+      "required": false,
+      "type": "integer"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `reactions:read`",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "desc": "Show reactions made by this user. Defaults to the authed user.",
+      "required": false,
+      "type": "string"
     }
+  },
+  "desc": "Lists reactions made by a user.",
+  "errors": {
+    "account_inactiv": "Error: account_inactiv",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required",
+    "user_not_found": "Error: user_not_found"
+  }
 }

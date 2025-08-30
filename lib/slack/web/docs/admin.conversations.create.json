@@ -1,0 +1,40 @@
+{
+  "args": {
+    "description": {
+      "desc": "Description of the public or private channel to create.",
+      "required": true,
+      "type": "string"
+    },
+    "is_private": {
+      "desc": "When `true`, creates a private channel instead of a public channel",
+      "required": true,
+      "type": "boolean"
+    },
+    "name": {
+      "desc": "Name of the public or private channel to create.",
+      "required": true,
+      "type": "string"
+    },
+    "org_wide": {
+      "desc": "When `true`, the channel will be available org-wide. Note: if the channel is not `org_wide=true`, you must specify a `team_id` for this channel",
+      "required": true,
+      "type": "boolean"
+    },
+    "team_id": {
+      "desc": "The workspace to create the channel in. Note: this argument is required unless you set `org_wide=true`.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Create a public or private channel-based conversation.",
+  "errors": {
+    "could_not_create_channel": "Error: could_not_create_channel",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "invalid_name": "Error: invalid_name",
+    "invalid_team": "Error: invalid_team",
+    "name_taken": "Error: name_taken",
+    "restricted_action": "Error: restricted_action",
+    "team_id_or_org_required": "Error: team_id_or_org_required",
+    "team_not_found": "Error: team_not_found"
+  }
+}

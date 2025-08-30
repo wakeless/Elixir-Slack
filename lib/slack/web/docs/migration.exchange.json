@@ -1,0 +1,47 @@
+{
+  "args": {
+    "team_id": {
+      "desc": "Specify team_id starts with `T` in case of Org Token",
+      "required": false,
+      "type": "string"
+    },
+    "to_old": {
+      "desc": "Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`.",
+      "required": false,
+      "type": "boolean"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `tokens.basic`",
+      "required": true,
+      "type": "string"
+    },
+    "users": {
+      "desc": "A comma-separated list of user ids, up to 400 per request",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "For Enterprise Grid workspaces, map local user IDs to global user IDs",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "not_enterprise_team": "Error: not_enterprise_team",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "too_many_users": "Error: too_many_users",
+    "upgrade_required": "Error: upgrade_required"
+  }
+}

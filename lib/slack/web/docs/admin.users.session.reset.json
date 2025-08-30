@@ -1,0 +1,21 @@
+{
+  "args": {
+    "mobile_only": {
+      "desc": "Only expire mobile sessions (default: false)",
+      "required": true,
+      "type": "boolean"
+    },
+    "user_id": {
+      "desc": "The ID of the user to wipe sessions for",
+      "required": true,
+      "type": "string"
+    },
+    "web_only": {
+      "desc": "Only expire web sessions (default: false)",
+      "required": true,
+      "type": "boolean"
+    }
+  },
+  "desc": "Wipes all valid sessions on all devices for a given user",
+  "errors": {}
+}

@@ -1,0 +1,16 @@
+{
+  "args": {
+    "channel_ids": {
+      "desc": "Comma-separated string of channel IDs",
+      "required": true,
+      "type": "string"
+    },
+    "usergroup_id": {
+      "desc": "ID of the IDP Group",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Remove one or more default channels from an org-level IDP group (user group).",
+  "errors": {}
+}

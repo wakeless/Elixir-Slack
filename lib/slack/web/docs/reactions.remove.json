@@ -1,45 +1,55 @@
 {
-	"desc": "Removes a reaction from an item.",
-
-	"args": {
-		"name": {
-			"required"	: true,
-			"example"	: "thumbsup",
-			"desc"		: "Reaction (emoji) name."
-		},
-
-		"file": {
-			"type"		: "file",
-			"required"	: false,
-			"desc"		: "File to remove reaction from."
-		},
-
-		"file_comment": {
-			"type"		: "file_comment",
-			"required"	: false,
-			"desc"		: "File comment to remove reaction from."
-		},
-
-		"channel": {
-			"required"	: false,
-			"type"		: "channel",
-			"desc"		: "Channel where the message to remove reaction from was posted."
-		},
-
-		"timestamp": {
-			"required"	: false,
-			"type"		: "timestamp",
-			"desc"		: "Timestamp of the message to remove reaction from."
-		}
-	},
-
-	"errors": {
-		"bad_timestamp"			: "Value passed for `timestamp` was invalid.",
-		"file_not_found"		: "File specified by `file` does not exist.",
-		"file_comment_not_found"	: "File comment specified by `file_comment` does not exist.",
-		"message_not_found"		: "Message specified by `channel` and `timestamp` does not exist.",
-		"no_item_specified"		: "`file`, `file_comment`, or combination of `channel` and `timestamp` was not specified.",
-		"invalid_name"			: "Value passed for `name` was invalid.",
-		"no_reaction"			: "The specified item does not have the user/reaction combination."
-	}
+  "args": {
+    "channel": {
+      "desc": "Channel where the message to remove reaction from was posted.",
+      "required": true,
+      "type": "string"
+    },
+    "file": {
+      "desc": "File to remove reaction from.",
+      "required": true,
+      "type": "string"
+    },
+    "file_comment": {
+      "desc": "File comment to remove reaction from.",
+      "required": true,
+      "type": "string"
+    },
+    "name": {
+      "desc": "Reaction (emoji) name.",
+      "required": true,
+      "type": "string"
+    },
+    "timestamp": {
+      "desc": "Timestamp of the message to remove reaction from.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Removes a reaction from an item.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "bad_timestamp": "Error: bad_timestamp",
+    "fatal_error": "Error: fatal_error",
+    "file_comment_not_found": "Error: file_comment_not_found",
+    "file_not_found": "Error: file_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_name": "Error: invalid_name",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "message_not_found": "Error: message_not_found",
+    "missing_post_type": "Error: missing_post_type",
+    "no_item_specified": "Error: no_item_specified",
+    "no_permission": "Error: no_permission",
+    "no_reaction": "Error: no_reaction",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

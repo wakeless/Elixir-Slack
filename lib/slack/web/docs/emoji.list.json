@@ -1,9 +1,11 @@
 {
-	"desc": "Lists custom emoji for a team.",
-
-	"args": {
-	},
-
-	"errors": {
-	}
+  "args": {
+    "token": {
+      "desc": "Authentication token. Requires scope: `emoji:read`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Lists custom emoji for a team.",
+  "errors": {}
 }

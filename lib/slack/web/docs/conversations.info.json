@@ -1,27 +1,43 @@
 {
-  "desc": "Returns information about a workspace conversation.",
-
   "args": {
     "channel": {
-      "example" : "G1234567890",
-      "required": true,
-      "desc"    : "Conversation ID to learn more about."
+      "desc": "Conversation ID to learn more about",
+      "required": false,
+      "type": "string"
     },
     "include_locale": {
-      "example" : "true",
+      "desc": "Set this to `true` to receive the locale for this conversation. Defaults to `false`",
       "required": false,
-      "desc"    : "Set this to `true` to receive the locale for this conversation. Defaults to `false`",
-      "default" : "false"
+      "type": "boolean"
     },
     "include_num_members": {
-      "example" : "true",
+      "desc": "Set to `true` to include the member count for the specified conversation. Defaults to `false`",
       "required": false,
-      "desc"    : "Set to `true` to include the member count for the specified conversation. Defaults to `false`",
-      "default" : "false"
+      "type": "boolean"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `conversations:read`",
+      "required": false,
+      "type": "string"
     }
   },
-
+  "desc": "Retrieve information about a conversation.",
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid"
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
   }
 }

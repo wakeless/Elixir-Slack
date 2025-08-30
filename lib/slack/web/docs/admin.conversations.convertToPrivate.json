@@ -1,0 +1,21 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to convert to private.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Convert a public channel to a private channel.",
+  "errors": {
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "could_not_convert_channel": "Error: could_not_convert_channel",
+    "default_org_wide_channel": "Error: default_org_wide_channel",
+    "external_channel_migrating": "Error: external_channel_migrating",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "method_not_supported_for_channel_type": "Error: method_not_supported_for_channel_type",
+    "name_taken": "Error: name_taken",
+    "restricted_action": "Error: restricted_action"
+  }
+}

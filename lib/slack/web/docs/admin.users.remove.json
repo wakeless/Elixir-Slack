@@ -1,0 +1,16 @@
+{
+  "args": {
+    "team_id": {
+      "desc": "The ID (`T1234`) of the workspace.",
+      "required": true,
+      "type": "string"
+    },
+    "user_id": {
+      "desc": "The ID of the user to remove.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Remove a user from a workspace.",
+  "errors": {}
+}

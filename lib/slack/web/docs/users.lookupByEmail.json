@@ -1,16 +1,35 @@
 {
-	"desc": "Retrieve a single user by looking them up by their registered email address. Requires `users:read.email`.",
-
-	"args": {
-		"email": {
-			"type"		: "string",
-			"required"	: true,
-			"desc"		: "User's email address"
-		}
-	},
-
-	"errors": {
-		"user_not_found"	: "Value passed for `user` was invalid.",
-		"missing_scope"		: "The token used is not granted the specific scope permissions required to complete this request. Need: `users:read.email`."
-	}
+  "args": {
+    "email": {
+      "desc": "An email address belonging to a user in the workspace",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `users:read.email`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Find a user with an email address.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "enterprise_is_restricted": "Error: enterprise_is_restricted",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required",
+    "users_not_found": "Error: users_not_found"
+  }
 }

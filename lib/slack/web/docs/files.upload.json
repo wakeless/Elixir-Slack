@@ -1,47 +1,73 @@
 {
-	"desc": "Uploads or creates a file.",
-
-	"args": {
-		"file": {
-			"required"	: true,
-			"example"	: "...",
-			"desc"		: "File contents via `multipart/form-data`.",
-			"type"		: "file"
-		},
-		"content": {
-			"required"	: false,
-			"example"	: "...",
-			"desc"		: "File contents via a POST var."
-		},
-		"filetype": {
-			"required"	: false,
-			"example"	: "php",
-			"desc"		: "Slack-internal file type identifier."
-		},
-		"filename": {
-			"required"	: true,
-			"example"	: "foo.txt",
-			"desc"		: "Filename of file."
-		},
-		"title": {
-			"required"	: false,
-			"example"	: "My File",
-			"desc"		: "Title of file."
-		},
-		"initial_comment": {
-			"required"	: false,
-			"example"	: "Best!",
-			"desc"		: "Initial comment to add to file."
-		},
-		"channels": {
-			"type"		: "channel",
-			"required"	: false,
-			"desc"		: "Comma-separated list of channel names or IDs where the file will be shared."
-		}
-	},
-
-	"errors": {
-		"posting_to_general_channel_denied"	: "An admin has restricted posting to the #general channel.",
-		"invalid_channel"			: "One or more channels supplied are invalid"
-	}
+  "args": {
+    "channels": {
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared.",
+      "required": true,
+      "type": "string"
+    },
+    "content": {
+      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a `file`.",
+      "required": true,
+      "type": "string"
+    },
+    "file": {
+      "desc": "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`.",
+      "required": true,
+      "type": "string"
+    },
+    "filename": {
+      "desc": "Filename of file.",
+      "required": true,
+      "type": "string"
+    },
+    "filetype": {
+      "desc": "A [file type](/types/file#file_types) identifier.",
+      "required": true,
+      "type": "string"
+    },
+    "initial_comment": {
+      "desc": "The message text introducing the file in specified `channels`.",
+      "required": true,
+      "type": "string"
+    },
+    "thread_ts": {
+      "desc": "Provide another message's `ts` value to upload this file as a reply. Never use a reply's `ts` value; use its parent instead.",
+      "required": true,
+      "type": "number"
+    },
+    "title": {
+      "desc": "Title of file.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `files:write:user`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Uploads or creates a file.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "file_upload_size_restricted": "Error: file_upload_size_restricted",
+    "file_uploads_disabled": "Error: file_uploads_disabled",
+    "file_uploads_except_images_disabled": "Error: file_uploads_except_images_disabled",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_channel": "Error: invalid_channel",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "posting_to_general_channel_denied": "Error: posting_to_general_channel_denied",
+    "request_timeout": "Error: request_timeout",
+    "storage_limit_reached": "Error: storage_limit_reached",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

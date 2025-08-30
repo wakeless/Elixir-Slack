@@ -1,0 +1,21 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "Limit for how many users to be retrieved per page",
+      "required": false,
+      "type": "integer"
+    },
+    "team_id": {
+      "desc": "The ID (`T1234`) of the workspace.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "List users on a workspace",
+  "errors": {}
+}

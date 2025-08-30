@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.slack.com)",
+      "Bash(mix test:*)",
+      "Bash(mix deps.get:*)",
+      "Bash(mix compile:*)",
+      "Bash(mix update_slack_api:*)",
+      "Bash(mix help:*)",
+      "Bash(mix update.slack.api:*)",
+      "Bash(mix deps.update:*)",
+      "Bash(mix format)",
+      "Bash(mix run:*)",
+      "Bash(mix deps.compile:*)",
+      "Bash(mix hex.info:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

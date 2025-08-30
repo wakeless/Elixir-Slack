@@ -1,18 +1,39 @@
 {
-	"desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
-
-	"args": {
-		"num_minutes": {
-			"required"	: true,
-			"type"		: "int",
-			"example"	: "60",
-			"desc"		: "Number of minutes, from now, to snooze until."
-		}
-	},
-	"errors": {
-		"missing_duration"	: "No value provided for `num_minutes`",
-		"snooze_failed"		: "There was a problem setting the user's Do Not Disturb status"
-
-	}
-
+  "args": {
+    "num_minutes": {
+      "desc": "Number of minutes, from now, to snooze until.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `dnd:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_duration": "Error: missing_duration",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "snooze_failed": "Error: snooze_failed",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "too_long": "Error: too_long",
+    "upgrade_required": "Error: upgrade_required",
+    "user_is_bot": "Error: user_is_bot"
+  }
 }

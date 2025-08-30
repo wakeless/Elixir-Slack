@@ -1,0 +1,16 @@
+{
+  "args": {
+    "name": {
+      "desc": "The name of the emoji to be removed. Colons (`:myemoji:`) around the value are not required, although they may be included.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Remove an emoji across an Enterprise Grid organization",
+  "errors": {}
+}

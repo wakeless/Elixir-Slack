@@ -1,0 +1,20 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to archive.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Archive a public or private channel.",
+  "errors": {
+    "already_archived": "Error: already_archived",
+    "cant_archive_general": "Error: cant_archive_general",
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "could_not_archive_channel": "Error: could_not_archive_channel",
+    "default_org_wide_channel": "Error: default_org_wide_channel",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "restricted_action": "Error: restricted_action"
+  }
+}

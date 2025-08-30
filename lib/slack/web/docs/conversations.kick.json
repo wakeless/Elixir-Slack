@@ -1,0 +1,40 @@
+{
+  "args": {
+    "channel": {
+      "desc": "ID of conversation to remove user from.",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "desc": "User ID to be removed.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Removes a user from a conversation.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "cant_kick_from_general": "Error: cant_kick_from_general",
+    "cant_kick_self": "Error: cant_kick_self",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "method_not_supported_for_channel_type": "Error: method_not_supported_for_channel_type",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "not_in_channel": "Error: not_in_channel",
+    "request_timeout": "Error: request_timeout",
+    "restricted_action": "Error: restricted_action",
+    "upgrade_required": "Error: upgrade_required",
+    "user_is_bot": "Error: user_is_bot",
+    "user_is_restricted": "Error: user_is_restricted",
+    "user_not_found": "Error: user_not_found"
+  }
+}

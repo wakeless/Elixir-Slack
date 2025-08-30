@@ -1,16 +1,30 @@
 {
-	"desc": "Deletes a file.",
-
-	"args": {
-		"file": {
-			"required"	: true,
-			"desc"		: "ID of file to delete."
-		}
-	},
-
-	"errors": {
-		"file_not_found"	: "The file does not exist, or is not visible to the calling user.",
-		"file_deleted"		: "The file has already been deleted.",
-		"cant_delete_file"	: "Authenticated user does not have permission to delete this file."
-	}
+  "args": {
+    "file": {
+      "desc": "ID of file to delete.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Deletes a file.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "cant_delete_file": "Error: cant_delete_file",
+    "file_deleted": "Error: file_deleted",
+    "file_not_found": "Error: file_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

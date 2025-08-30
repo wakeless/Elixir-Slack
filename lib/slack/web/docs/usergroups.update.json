@@ -1,39 +1,60 @@
 {
-	"desc": "Update an existing user group",
-
-	"args": {
-		"usergroup": {
-			"required"	: true,
-			"type"		: "string",
-			"example"	: "S0604QSJC",
-			"desc"		: "The encoded ID of the user group to update."
-		},
-		"name": {
-			"required"	: false,
-			"type"		: "string",
-			"example"	: "My Test Team",
-			"desc"		: "A name for the user group. Must be unique among user groups."
-		},
-		"handle": {
-			"required"	: false,
-			"type"		: "string",
-			"desc"		: "A mention handle. Must be unique among channels, users and user groups."
-		},
-		"description": {
-			"required"	: false,
-			"type"		: "string",
-			"desc"		: "A short description of the user group."
-		},
-		"channels": {
-			"required"	: false,
-			"type"		: "string",
-			"desc"		: "A comma separated string of encoded channel IDs for which the user group uses as a default."
-		},
-		"include_count": {
-			"required"	: false,
-			"type"		: "int",
-			"example"	: "1",
-			"desc"		: "Include the number of users in the user group."
-		}
-	}
+  "args": {
+    "channels": {
+      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default.",
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "desc": "A short description of the User Group.",
+      "required": true,
+      "type": "string"
+    },
+    "handle": {
+      "desc": "A mention handle. Must be unique among channels, users and User Groups.",
+      "required": true,
+      "type": "string"
+    },
+    "include_count": {
+      "desc": "Include the number of users in the User Group.",
+      "required": true,
+      "type": "boolean"
+    },
+    "name": {
+      "desc": "A name for the User Group. Must be unique among User Groups.",
+      "required": true,
+      "type": "string"
+    },
+    "usergroup": {
+      "desc": "The encoded ID of the User Group to update.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Update an existing User Group",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_charset": "Error: missing_charset",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "permission_denied": "Error: permission_denied",
+    "request_timeout": "Error: request_timeout",
+    "superfluous_charset": "Error: superfluous_charset",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "upgrade_require": "Error: upgrade_require",
+    "user_is_bot": "Error: user_is_bot",
+    "user_is_restricted": "Error: user_is_restricted"
+  }
 }

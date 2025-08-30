@@ -30,15 +30,27 @@ defmodule Slack.Web.DocumentationTest do
 
       module_functions = Slack.Web.Team.__info__(:functions)
 
-      assert {:info, 0} in module_functions
       assert {:info, 1} in module_functions
+      assert {:info, 2} in module_functions
     end
 
     test "accepts versioned endpoints" do
-      file_content =
-        "#{__DIR__}/../../../lib/slack/web/docs/oauth.v2.access.json"
-        |> File.read!()
-        |> Jason.decode!(%{})
+      file_content = %{
+        "desc" => "Exchanges a temporary OAuth verifier code for an access token.",
+        "args" => %{
+          "code" => %{
+            "desc" => "The `code` param returned via the OAuth callback.",
+            "required" => true,
+            "type" => "string"
+          },
+          "client_id" => %{
+            "desc" => "Issued when you created your application.",
+            "required" => false,
+            "type" => "string"
+          }
+        },
+        "errors" => %{}
+      }
 
       doc = Documentation.new(file_content, "oauth.v2.access.json")
 
@@ -48,8 +60,8 @@ defmodule Slack.Web.DocumentationTest do
 
       module_functions = Slack.Web.Oauth.V2.__info__(:functions)
 
-      assert {:access, 3} in module_functions
-      assert {:access, 4} in module_functions
+      assert {:access, 1} in module_functions
+      assert {:access, 2} in module_functions
     end
   end
 end

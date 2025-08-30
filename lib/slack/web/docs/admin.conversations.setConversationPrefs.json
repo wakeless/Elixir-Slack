@@ -1,0 +1,25 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to set the prefs for",
+      "required": true,
+      "type": "string"
+    },
+    "prefs": {
+      "desc": "The prefs for this channel in a stringified JSON format.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set the posting permissions for a public or private channel.",
+  "errors": {
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "could_not_set_channel_pref": "Error: could_not_set_channel_pref",
+    "default_org_wide_channel": "Error: default_org_wide_channel",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "missing_scope": "Error: missing_scope",
+    "not_an_admin": "Error: not_an_admin",
+    "restricted_action": "Error: restricted_action"
+  }
+}

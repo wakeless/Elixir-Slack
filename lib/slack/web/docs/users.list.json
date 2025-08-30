@@ -1,10 +1,45 @@
 {
-	"desc": "Lists all users in a Slack team.",
-	"args": {
-		"presence": {
-			"required"	: false,
-			"example"       : 1,
-			"desc"		: "Whether to include presence data in the output"
-		}
-	}
+  "args": {
+    "cursor": {
+      "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail.",
+      "required": false,
+      "type": "string"
+    },
+    "include_locale": {
+      "desc": "Set this to `true` to receive the locale for users. Defaults to `false`",
+      "required": false,
+      "type": "boolean"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors.",
+      "required": false,
+      "type": "integer"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `users:read`",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Lists all users in a Slack team.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_cursor": "Error: invalid_cursor",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "limit_required": "Error: limit_required",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

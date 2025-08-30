@@ -1,76 +1,98 @@
 {
-	"desc": "Sends a message to a channel.",
-
-	"args": {
-		"channel": {
-			"type"		: "channel",
-			"required"	: true,
-			"desc"		: "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See [below](#channels) for more details."
-		},
-		"text": {
-			"required"	: true,
-			"example"	: "Hello world",
-			"desc"		: "Text of the message to send. See below for an explanation of [formatting](#formatting)."
-		},
-		"parse": {
-			"example"	: "full",
-			"desc"		: "Change how messages are treated. Defaults to `none`. See [below](#formatting)."
-		},
-		"link_names": {
-			"example"	: "1",
-			"desc"		: "Find and link channel names and usernames."
-		},
-		"attachments": {
-			"example"	: "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-			"desc"		: "Structured message attachments."
-		},
-                "blocks": {
-                        "required"      : false,
-			"example"	: "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
-			"desc"		: "A JSON-based array of structured blocks, presented as a URL-encoded string"
-		},
-		"thread_ts": {
-                        "required"      : false,
-			"example"	: "1234567890.123456",
-			"desc"		: "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
-		},
-		"unfurl_links": {
-			"example"	: "true",
-			"desc"		: "Pass true to enable unfurling of primarily text-based content."
-		},
-		"unfurl_media": {
-			"example"	: "false",
-			"desc"		: "Pass false to disable unfurling of media content."
-		},
-		"username": {
-			"required"	: false,
-			"example"	: "My Bot",
-			"desc"		: "Set your bot's user name. Must be used in conjunction with `as_user` set to false, otherwise ignored. See [authorship](#authorship) below."
-		},
-		"as_user": {
-			"required"	: false,
-			"example"	: "true",
-			"desc"		: "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See [authorship](#authorship) below."
-		},
-		"icon_url": {
-			"required"	: false,
-			"example"	: "http://lorempixel.com/48/48",
-			"desc"		: "URL to an image to use as the icon for this message. Must be used in conjunction with `as_user` set to false, otherwise ignored. See [authorship](#authorship) below."
-		},
-		"icon_emoji": {
-			"required"	: false,
-			"example"	: ":chart_with_upwards_trend:",
-			"desc"		: "emoji to use as the icon for this message. Overrides `icon_url`. Must be used in conjunction with `as_user` set to false, otherwise ignored. See [authorship](#authorship) below."
-		}
-	},
-
-	"errors": {
-
-		"channel_not_found"	: "Value passed for `channel` was invalid.",
-		"not_in_channel"	: "Cannot post user messages to a channel they are not in.",
-		"is_archived"		: "Channel has been archived.",
-		"msg_too_long"		: "Message text is too long",
-		"no_text"		: "No message text provided",
-		"rate_limited"      : "Application has posted too many messages, [read the Rate Limit documentation](/docs/rate-limits) for more information"
-	}
+  "args": {
+    "as_user": {
+      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See [authorship](#authorship) below.",
+      "required": true,
+      "type": "string"
+    },
+    "attachments": {
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
+      "required": true,
+      "type": "string"
+    },
+    "blocks": {
+      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
+      "required": true,
+      "type": "string"
+    },
+    "channel": {
+      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See [below](#channels) for more details.",
+      "required": true,
+      "type": "string"
+    },
+    "icon_emoji": {
+      "desc": "Emoji to use as the icon for this message. Overrides `icon_url`. Must be used in conjunction with `as_user` set to `false`, otherwise ignored. See [authorship](#authorship) below.",
+      "required": true,
+      "type": "string"
+    },
+    "icon_url": {
+      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with `as_user` set to false, otherwise ignored. See [authorship](#authorship) below.",
+      "required": true,
+      "type": "string"
+    },
+    "link_names": {
+      "desc": "Find and link channel names and usernames.",
+      "required": true,
+      "type": "boolean"
+    },
+    "mrkdwn": {
+      "desc": "Disable Slack markup parsing by setting to `false`. Enabled by default.",
+      "required": true,
+      "type": "boolean"
+    },
+    "parse": {
+      "desc": "Change how messages are treated. Defaults to `none`. See [below](#formatting).",
+      "required": true,
+      "type": "string"
+    },
+    "reply_broadcast": {
+      "desc": "Used in conjunction with `thread_ts` and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to `false`.",
+      "required": true,
+      "type": "boolean"
+    },
+    "text": {
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. [See below](#text_usage) for more detail.",
+      "required": true,
+      "type": "string"
+    },
+    "thread_ts": {
+      "desc": "Provide another message's `ts` value to make this message a reply. Avoid using a reply's `ts` value; use its parent instead.",
+      "required": true,
+      "type": "string"
+    },
+    "unfurl_links": {
+      "desc": "Pass true to enable unfurling of primarily text-based content.",
+      "required": true,
+      "type": "boolean"
+    },
+    "unfurl_media": {
+      "desc": "Pass false to disable unfurling of media content.",
+      "required": true,
+      "type": "boolean"
+    },
+    "username": {
+      "desc": "Set your bot's user name. Must be used in conjunction with `as_user` set to false, otherwise ignored. See [authorship](#authorship) below.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Sends a message to a channel.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_post_type": "Error: invalid_post_type",
+    "is_archived": "Error: is_archived",
+    "missing_post_type": "Error: missing_post_type",
+    "msg_too_long": "Error: msg_too_long",
+    "no_text": "Error: no_text",
+    "not_authed": "Error: not_authed",
+    "not_in_channel": "Error: not_in_channel",
+    "rate_limited": "Error: rate_limited",
+    "too_many_attachments": "Error: too_many_attachments"
+  }
 }

@@ -1,21 +1,42 @@
 {
-  "desc": "Retrieve a permalink URL for a specific extant message.",
-
   "args": {
     "channel": {
-      "type": "channel",
+      "desc": "The ID of the conversation or channel containing the message",
       "required": true,
-      "desc": "The ID of the conversation or channel containing the message."
+      "type": "string"
     },
     "message_ts": {
+      "desc": "A message's `ts` value, uniquely identifying it within a channel",
       "required": true,
-      "example": "1405894322.002768",
-      "desc": "A message's ts value, uniquely identifying it within a channel."
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `none`",
+      "required": true,
+      "type": "string"
     }
   },
-
+  "desc": "Retrieve a permalink URL for a specific extant message",
   "errors": {
-    "message_not_found": "No message exists with the requested timestamp.",
-    "channel_not_found": "Value passed for `channel` was invalid."
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "message_not_found": "Error: message_not_found",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "upgrade_required": "Error: upgrade_required"
   }
 }

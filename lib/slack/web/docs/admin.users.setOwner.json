@@ -1,0 +1,16 @@
+{
+  "args": {
+    "team_id": {
+      "desc": "The ID (`T1234`) of the workspace.",
+      "required": true,
+      "type": "string"
+    },
+    "user_id": {
+      "desc": "Id of the user to promote to owner.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Set an existing guest, regular user, or admin user to be a workspace owner.",
+  "errors": {}
+}

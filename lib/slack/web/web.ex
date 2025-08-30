@@ -21,8 +21,6 @@ defmodule Slack.Web do
   end
 end
 
-alias Slack.Web.Documentation
-
 Enum.each(Slack.Web.get_documentation(), fn {module_name, functions} ->
   module =
     module_name
@@ -31,6 +29,7 @@ Enum.each(Slack.Web.get_documentation(), fn {module_name, functions} ->
     |> Enum.reduce(Slack.Web, &Module.concat(&2, &1))
 
   defmodule module do
+    alias Slack.Web.Documentation
     Enum.each(functions, fn doc ->
       function_name = doc.function
 

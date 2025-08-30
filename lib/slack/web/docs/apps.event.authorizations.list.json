@@ -1,0 +1,21 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "event_context": {
+      "desc": "",
+      "required": true,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "desc": "Get a list of authorizations for the given event context. Each authorization represents an app installation that the event is visible to.",
+  "errors": {}
+}

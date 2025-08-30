@@ -1,22 +1,33 @@
 {
-  "desc": "Deletes an existing comment on a file.",
-
   "args": {
     "file": {
-      "required"	: true,
-      "example"	: "F1234567890",
-      "desc"		: "File to delete a comment from."
+      "desc": "File to delete a comment from.",
+      "required": true,
+      "type": "string"
     },
     "id": {
-      "required"	: true,
-      "example"	: "Fc1234567890",
-      "desc"		: "The comment to delete."
+      "desc": "The comment to delete.",
+      "required": true,
+      "type": "string"
     }
   },
-
+  "desc": "Deletes an existing comment on a file.",
   "errors": {
-    "file_not_found"	: "The requested file could not be found.",
-    "file_deleted"		: "The requested file was previously deleted.",
-    "cant_delete"	    : "The requested comment could not be deleted."
+    "account_inactive": "Error: account_inactive",
+    "cant_delete": "Error: cant_delete",
+    "comment_not_found": "Error: comment_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "upgrade_required": "Error: upgrade_required"
   }
 }

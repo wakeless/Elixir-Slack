@@ -1,0 +1,16 @@
+{
+  "args": {
+    "invite_request_id": {
+      "desc": "ID of the request to invite.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "ID for the workspace where the invite request was made.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Deny a workspace invite request.",
+  "errors": {}
+}

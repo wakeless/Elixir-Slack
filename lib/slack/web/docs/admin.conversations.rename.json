@@ -1,0 +1,24 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to rename.",
+      "required": true,
+      "type": "string"
+    },
+    "name": {
+      "desc": "",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Rename a public or private channel.",
+  "errors": {
+    "channel_not_found": "Error: channel_not_found",
+    "channel_type_not_supported": "Error: channel_type_not_supported",
+    "could_not_rename_channel": "Error: could_not_rename_channel",
+    "default_org_wide_channel": "Error: default_org_wide_channel",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "name_taken": "Error: name_taken",
+    "restricted_action": "Error: restricted_action"
+  }
+}

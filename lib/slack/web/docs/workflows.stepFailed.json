@@ -1,0 +1,16 @@
+{
+  "args": {
+    "error": {
+      "desc": "A JSON-based object with a `message` property that should contain a human readable error message.",
+      "required": true,
+      "type": "string"
+    },
+    "workflow_step_execute_id": {
+      "desc": "Context identifier that maps to the correct workflow step execution.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Indicate that an app's step in a workflow failed to execute.",
+  "errors": {}
+}

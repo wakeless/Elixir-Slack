@@ -1,0 +1,21 @@
+{
+  "args": {
+    "image_url": {
+      "desc": "Image URL for the icon",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "ID for the workspace to set the icon for.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.teams:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Sets the icon of a workspace.",
+  "errors": {}
+}

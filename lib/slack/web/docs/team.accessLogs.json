@@ -1,14 +1,48 @@
 {
-    "desc": "Gets the access logs for the current team.",
-
-    "args": {
+  "args": {
+    "before": {
+      "desc": "End of time range of logs to include in results (inclusive).",
+      "required": false,
+      "type": "string"
     },
-
-    "has_paging"    : true,
-    "default_count" : 100,
-
-    "errors": {
-        "paid_only": "This is only available to paid teams.",
-        "over_pagination_limit": "It is not possible to request more than 1000 items per page or more than 100 pages."
+    "count": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "page": {
+      "desc": "",
+      "required": false,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin`",
+      "required": true,
+      "type": "string"
     }
+  },
+  "desc": "Gets the access logs for the current team.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "over_pagination_limit": "Error: over_pagination_limit",
+    "paid_only": "Error: paid_only",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "upgrade_required": "Error: upgrade_required",
+    "user_is_bot": "Error: user_is_bot"
+  }
 }

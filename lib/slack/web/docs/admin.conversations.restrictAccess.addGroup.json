@@ -1,0 +1,26 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to link this group to.",
+      "required": true,
+      "type": "string"
+    },
+    "group_id": {
+      "desc": "The [IDP Group](https://slack.com/help/articles/115001435788-Connect-identity-provider-groups-to-your-Enterprise-Grid-org) ID to be an allowlist for the private channel.",
+      "required": true,
+      "type": "string"
+    },
+    "team_id": {
+      "desc": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin.conversations:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Add an allowlist of IDP groups for accessing a channel",
+  "errors": {}
+}

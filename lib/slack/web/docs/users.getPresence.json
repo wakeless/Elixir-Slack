@@ -1,14 +1,16 @@
 {
-	"desc": "Gets user presence information.",
-
-	"args": {
-		"user": {
-			"required"	: true,
-			"type"		: "user",
-			"desc"		: "User to get presence info on. Defaults to the authed user."
-		}
-	},
-
-	"errors": {
-	}
+  "args": {
+    "token": {
+      "desc": "Authentication token. Requires scope: `users:read`",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "desc": "User to get presence info on. Defaults to the authed user.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Gets user presence information.",
+  "errors": {}
 }

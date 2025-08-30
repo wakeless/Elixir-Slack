@@ -1,41 +1,40 @@
 {
-	"desc" : "Pins an item to a channel.",
-
-	"args" : {
-		"channel" : {
-			"required"	: true,
-			"type"		: "channel",
-			"desc"		: "Channel to pin the item in."
-		},
-
-		"file" : {
-			"type"		: "file",
-			"required"	: false,
-			"desc"		: "File to pin."
-		},
-
-		"file_comment" : {
-			"type"		: "file_comment",
-			"required"	: false,
-			"desc"		: "File comment to pin."
-		},
-
-		"timestamp" : {
-			"required"	: false,
-			"type"		: "timestamp",
-			"desc"		: "Timestamp of the message to pin."
-		}
-	},
-
-	"errors" : {
-		"bad_timestamp"			: "Value passed for `timestamp` was invalid.",
-		"file_not_found"		: "File specified by `file` does not exist.",
-		"file_comment_not_found"	: "File comment specified by `file_comment` does not exist.",
-		"message_not_found"		: "Message specified by `channel` and `timestamp` does not exist.",
-		"channel_not_found"		: "The `channel` argument was not specified or was invalid",
-		"no_item_specified"		: "One of `file`, `file_comment`, or `timestamp` was not specified.",
-		"already_pinned"		: "The specified item is already pinned to the channel.",
-		"permission_denied"		: "The user does not have permission to add pins to the channel.",
-		"file_not_shared"		: "File specified by `file` is not public nor shared to the channel."
-	}
+  "args": {
+    "channel": {
+      "desc": "Channel to pin the item in.",
+      "required": true,
+      "type": "string"
+    },
+    "timestamp": {
+      "desc": "Timestamp of the message to pin.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Pins an item to a channel.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "already_pinned": "Error: already_pinned",
+    "bad_timestamp": "Error: bad_timestamp",
+    "channel_not_found": "Error: channel_not_found",
+    "file_not_shared": "Error: file_not_shared",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "message_not_found": "Error: message_not_found",
+    "missing_post_type": "Error: missing_post_type",
+    "no_item_specified": "Error: no_item_specified",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "not_pinnable": "Error: not_pinnable",
+    "permission_denied": "Error: permission_denied",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

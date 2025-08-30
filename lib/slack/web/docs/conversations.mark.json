@@ -1,0 +1,36 @@
+{
+  "args": {
+    "channel": {
+      "desc": "Channel or conversation to set the read cursor for.",
+      "required": true,
+      "type": "string"
+    },
+    "ts": {
+      "desc": "Unique identifier of message you want marked as most recently seen in this conversation.",
+      "required": true,
+      "type": "number"
+    }
+  },
+  "desc": "Sets the read cursor in a channel.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "invalid_timestamp": "Error: invalid_timestamp",
+    "json_not_object": "Error: json_not_object",
+    "method_not_supported_for_channel_type": "Error: method_not_supported_for_channel_type",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_allowed_token_type": "Error: not_allowed_token_type",
+    "not_authed": "Error: not_authed",
+    "not_in_channel": "Error: not_in_channel",
+    "request_timeout": "Error: request_timeout",
+    "upgrade_required": "Error: upgrade_required"
+  }
+}

@@ -1,25 +1,38 @@
 {
-  "desc": "Change the topic of a conversation. The calling user must be a member of the conversation. Not all conversation types may have a purpose set.",
-
   "args": {
     "channel": {
-      "example" : "G1234567890",
+      "desc": "Conversation to set the topic of",
       "required": true,
-      "desc"    : "Conversation to set the purpose of."
+      "type": "string"
     },
     "topic": {
-      "example" : "Apply topically for best effects",
+      "desc": "The new topic string. Does not support formatting or linkification.",
       "required": true,
-      "desc"    : "The new topic string. Does not support formatting or linkification."
+      "type": "string"
     }
   },
-
+  "desc": "Sets the topic for a conversation.",
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid",
-    "not_in_channel": "Authenticated user is not in the channel.",
-    "is_archived": "Channel has been archived",
-    "too_long": "Topic was longer than 250 characters.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
-    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method."
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "is_archived": "Error: is_archived",
+    "json_not_object": "Error: json_not_object",
+    "method_not_supported_for_channel_type": "Error: method_not_supported_for_channel_type",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "not_in_channel": "Error: not_in_channel",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "too_long": "Error: too_long",
+    "upgrade_required": "Error: upgrade_required",
+    "user_is_restricted": "Error: user_is_restricted"
   }
 }

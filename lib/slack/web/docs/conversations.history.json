@@ -1,44 +1,59 @@
 {
-  "desc": "Returns a portion of message events from the specified conversation.\n\nBot user tokens may use this method for direct message and multi-party direct message conversations but lack sufficient permissions to use this method on public and private channels.",
-
   "args": {
     "channel": {
-      "example" : "G1234567890",
-      "required": true,
-      "desc"    : "Conversation ID to fetch history for."
+      "desc": "Conversation ID to fetch history for.",
+      "required": false,
+      "type": "string"
     },
     "cursor": {
-      "example" : "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail.",
       "required": false,
-      "desc"    : "Paginate through collections of data by setting the cursor parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+      "type": "string"
     },
     "inclusive": {
-      "example" : "true",
+      "desc": "Include messages with latest or oldest timestamp in results only when either timestamp is specified.",
       "required": false,
-      "desc"    : "Include messages with latest or oldest timestamp in results only when either timestamp is specified.",
-      "default" : 0
+      "type": "boolean"
     },
     "latest": {
-      "example" : "1234567890.123456",
+      "desc": "End of time range of messages to include in results.",
       "required": false,
-      "desc"    : "End of time range of messages to include in results.",
-      "default" : "now"
+      "type": "number"
     },
     "limit": {
-      "example" : 20,
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.",
       "required": false,
-      "desc"    : "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.",
-      "default" : 100
+      "type": "integer"
     },
     "oldest": {
-      "example" : "1234567890.123456",
+      "desc": "Start of time range of messages to include in results.",
       "required": false,
-      "desc"    : "Start of time range of messages to include in results.",
-      "default" : 0
+      "type": "number"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `conversations:history`",
+      "required": false,
+      "type": "string"
     }
   },
-
+  "desc": "Fetches a conversation's history of messages and events.",
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid"
+    "account_inactive": "Error: account_inactive",
+    "channel_not_found": "Error: channel_not_found",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "invalid_ts_latest": "Error: invalid_ts_latest",
+    "invalid_ts_oldest": "Error: invalid_ts_oldest",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "upgrade_required": "Error: upgrade_required"
   }
 }

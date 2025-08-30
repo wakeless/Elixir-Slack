@@ -1,36 +1,46 @@
 {
-  "desc": "Returns a list of all channel-like conversations in a workspace.",
-
   "args": {
     "cursor": {
-      "example" : "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail.",
       "required": false,
-      "desc"    : "Paginate through collections of data by setting the cursor parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+      "type": "string"
     },
     "exclude_archived": {
-      "example" : "true",
+      "desc": "Set to `true` to exclude archived channels from the list",
       "required": false,
-      "desc"    : "Set this to `true` to exclude archived channels from the list",
-      "default" : "false"
+      "type": "boolean"
     },
     "limit": {
-      "example" : 20,
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer no larger than 1000.",
       "required": false,
-      "desc"    : "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer no larger than 1000.",
-      "default" : 100
+      "type": "integer"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `conversations:read`",
+      "required": false,
+      "type": "string"
     },
     "types": {
-      "example" : "public_channel,private_channel",
+      "desc": "Mix and match channel types by providing a comma-separated list of any combination of `public_channel`, `private_channel`, `mpim`, `im`",
       "required": false,
-      "desc"    : "Mix and match channel types by providing a comma-separated list of any combination of `public_channel`, `private_channel`, `mpim`, `im`",
-      "default" : "public_channel"
+      "type": "string"
     }
   },
-
+  "desc": "Lists all channels in a Slack team.",
   "errors": {
-    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
-    "invalid_limit": "Value passed for `limit` was invalid.",
-    "invalid_cursor": "Value passed for `cursor` was invalid.",
-    "invalid_types": "Value passed for type could not be used based on the method's capabilities or the permission scopes granted to the used token."
+    "account_inactive": "Error: account_inactive",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "upgrade_required": "Error: upgrade_required"
   }
 }

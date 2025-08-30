@@ -1,23 +1,42 @@
 {
-	"desc": "Deletes a message.",
-
-	"args": {
-		"ts": {
-			"required"	: true,
-			"example"	: "1405894322.002768",
-			"desc"		: "Timestamp of the message to be deleted."
-		},
-		"channel": {
-			"type"		: "channel",
-			"required"	: true,
-			"desc"		: "Channel containing the message to be deleted."
-		}
-	},
-
-	"errors": {
-		"message_not_found"			: "No message exists with the requested timestamp.",
-		"channel_not_found"			: "Value passed for `channel` was invalid.",
-		"cant_delete_message"			: "Authenticated user does not have permission to delete this message.",
-		"compliance_exports_prevent_deletion"	: "Compliance exports are on, messages can not be deleted"
-	}
+  "args": {
+    "as_user": {
+      "desc": "Pass true to delete the message as the authed user with `chat:write:user` scope. [Bot users](/bot-users) in this context are considered authed users. If unused or false, the message will be deleted with `chat:write:bot` scope.",
+      "required": true,
+      "type": "boolean"
+    },
+    "channel": {
+      "desc": "Channel containing the message to be deleted.",
+      "required": true,
+      "type": "string"
+    },
+    "ts": {
+      "desc": "Timestamp of the message to be deleted.",
+      "required": true,
+      "type": "number"
+    }
+  },
+  "desc": "Deletes a message.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "cant_delete_message": "Error: cant_delete_message",
+    "channel_not_found": "Error: channel_not_found",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_array_arg": "Error: invalid_array_arg",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "message_not_found": "Error: message_not_found",
+    "missing_post_type": "Error: missing_post_type",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "upgrade_required": "Error: upgrade_required"
+  }
 }

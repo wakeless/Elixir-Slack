@@ -1,0 +1,16 @@
+{
+  "args": {
+    "token": {
+      "desc": "Authentication token. Requires scope: `admin`",
+      "required": true,
+      "type": "string"
+    },
+    "user": {
+      "desc": "A user to retrieve the billable information for. Defaults to all users.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "desc": "Gets billable users information for the current team.",
+  "errors": {}
+}

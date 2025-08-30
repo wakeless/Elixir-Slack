@@ -1,0 +1,46 @@
+{
+  "args": {
+    "external_id": {
+      "desc": "Creator defined GUID for the file.",
+      "required": true,
+      "type": "string"
+    },
+    "external_url": {
+      "desc": "URL of the remote file.",
+      "required": true,
+      "type": "string"
+    },
+    "file": {
+      "desc": "Specify a file by providing its ID.",
+      "required": true,
+      "type": "string"
+    },
+    "filetype": {
+      "desc": "type of file",
+      "required": true,
+      "type": "string"
+    },
+    "indexable_file_contents": {
+      "desc": "File containing contents that can be used to improve searchability for the remote file.",
+      "required": true,
+      "type": "string"
+    },
+    "preview_image": {
+      "desc": "Preview of the document via `multipart/form-data`.",
+      "required": true,
+      "type": "string"
+    },
+    "title": {
+      "desc": "Title of the file being shared.",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "desc": "Authentication token. Requires scope: `remote_files:write`",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Updates an existing remote file.",
+  "errors": {}
+}

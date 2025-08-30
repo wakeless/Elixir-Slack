@@ -1,0 +1,16 @@
+{
+  "args": {
+    "cursor": {
+      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "desc": "The maximum number of items to return. Must be between 1 - 100 both inclusive.",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "desc": "List all teams on an Enterprise organization",
+  "errors": {}
+}

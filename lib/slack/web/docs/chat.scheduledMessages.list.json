@@ -1,0 +1,53 @@
+{
+  "args": {
+    "channel": {
+      "desc": "The channel of the scheduled messages",
+      "required": false,
+      "type": "string"
+    },
+    "cursor": {
+      "desc": "For pagination purposes, this is the `cursor` value returned from a previous call to `chat.scheduledmessages.list` indicating where you want to start this call from.",
+      "required": false,
+      "type": "string"
+    },
+    "latest": {
+      "desc": "A UNIX timestamp of the latest value in the time range",
+      "required": false,
+      "type": "number"
+    },
+    "limit": {
+      "desc": "Maximum number of original entries to return.",
+      "required": false,
+      "type": "integer"
+    },
+    "oldest": {
+      "desc": "A UNIX timestamp of the oldest value in the time range",
+      "required": false,
+      "type": "number"
+    }
+  },
+  "desc": "Returns a list of scheduled messages.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "ekm_access_denied": "Error: ekm_access_denied",
+    "fatal_error": "Error: fatal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_arguments": "Error: invalid_arguments",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_channel": "Error: invalid_channel",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_json": "Error: invalid_json",
+    "invalid_post_type": "Error: invalid_post_type",
+    "json_not_object": "Error: json_not_object",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked",
+    "upgrade_required": "Error: upgrade_required"
+  }
+}

@@ -1,9 +1,24 @@
 {
-	"desc": "Marks a user as active.",
-
-	"args": {
-	},
-
-	"errors": {
-	}
+  "args": {},
+  "desc": "Marked a user as active. Deprecated and non-functional.",
+  "errors": {
+    "account_inactive": "Error: account_inactive",
+    "ekm_access_denied": "Error: ekm_access_denied",
+    "fatal_error": "Error: fatal_error",
+    "internal_error": "Error: internal_error",
+    "invalid_arg_name": "Error: invalid_arg_name",
+    "invalid_arguments": "Error: invalid_arguments",
+    "invalid_auth": "Error: invalid_auth",
+    "invalid_charset": "Error: invalid_charset",
+    "invalid_form_data": "Error: invalid_form_data",
+    "invalid_post_type": "Error: invalid_post_type",
+    "missing_post_type": "Error: missing_post_type",
+    "missing_scope": "Error: missing_scope",
+    "no_permission": "Error: no_permission",
+    "not_authed": "Error: not_authed",
+    "org_login_required": "Error: org_login_required",
+    "request_timeout": "Error: request_timeout",
+    "team_added_to_org": "Error: team_added_to_org",
+    "token_revoked": "Error: token_revoked"
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "args": {
+    "channel_id": {
+      "desc": "The channel to be disconnected from some workspaces.",
+      "required": true,
+      "type": "string"
+    },
+    "leaving_team_ids": {
+      "desc": "The team to be removed from the channel. Currently only a single team id can be specified.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "desc": "Disconnect a connected channel from one or more workspaces.",
+  "errors": {
+    "cannot_kick_home_team": "Error: cannot_kick_home_team",
+    "cannot_kick_team": "Error: cannot_kick_team",
+    "channel_not_found": "Error: channel_not_found",
+    "feature_not_enabled": "Error: feature_not_enabled",
+    "leaving_team_not_in_channel": "Error: leaving_team_not_in_channel",
+    "leaving_team_required": "Error: leaving_team_required",
+    "missing_scope": "Error: missing_scope",
+    "no_teams_to_disconnect": "Error: no_teams_to_disconnect",
+    "not_an_admin": "Error: not_an_admin",
+    "not_an_enterprise": "Error: not_an_enterprise",
+    "not_supported": "Error: not_supported",
+    "restricted_action": "Error: restricted_action",
+    "team_not_found": "Error: team_not_found"
+  }
+}
