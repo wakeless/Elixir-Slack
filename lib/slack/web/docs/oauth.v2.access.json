@@ -2,12 +2,12 @@
   "args": {
     "client_id": {
       "desc": "Issued when you created your application.",
-      "required": false,
+      "required": true,
       "type": "string"
     },
     "client_secret": {
       "desc": "Issued when you created your application.",
-      "required": false,
+      "required": true,
       "type": "string"
     },
     "code": {

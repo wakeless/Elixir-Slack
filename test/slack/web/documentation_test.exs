@@ -38,13 +38,23 @@ defmodule Slack.Web.DocumentationTest do
       file_content = %{
         "desc" => "Exchanges a temporary OAuth verifier code for an access token.",
         "args" => %{
+          "client_id" => %{
+            "desc" => "Issued when you created your application.",
+            "required" => true,
+            "type" => "string"
+          },
+          "client_secret" => %{
+            "desc" => "Issued when you created your application.",
+            "required" => true,
+            "type" => "string"
+          },
           "code" => %{
             "desc" => "The `code` param returned via the OAuth callback.",
             "required" => true,
             "type" => "string"
           },
-          "client_id" => %{
-            "desc" => "Issued when you created your application.",
+          "redirect_uri" => %{
+            "desc" => "This must match the originally submitted URI (if one was sent).",
             "required" => false,
             "type" => "string"
           }
@@ -60,8 +70,8 @@ defmodule Slack.Web.DocumentationTest do
 
       module_functions = Slack.Web.Oauth.V2.__info__(:functions)
 
-      assert {:access, 1} in module_functions
-      assert {:access, 2} in module_functions
+      assert {:access, 3} in module_functions
+      assert {:access, 4} in module_functions
     end
   end
 end
